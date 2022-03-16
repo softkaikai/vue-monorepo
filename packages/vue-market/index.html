@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <script>
+      function setRootFontSize() {
+        const width = document.body.clientWidth
+        const htmlDom = document.documentElement
+        const devicePixelRatio = window.devicePixelRatio || 1
+        htmlDom.style.fontSize = Math.ceil(width * 20 * devicePixelRatio / 750) + 'px'
+      }
+      setRootFontSize()
+      window.onresize = function() {
+        setRootFontSize()
+      }
+      
+    </script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
